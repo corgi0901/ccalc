@@ -27,8 +27,6 @@ public:
 	Value operator-(Value obj);
 	Value operator*(Value obj);
 	Value operator/(Value obj);
-
-	std::string toString(void);
 };
 
 #endif /* _VALUE_HPP_ */

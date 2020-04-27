@@ -1,7 +1,5 @@
-#include <iostream>
-
-#include "ccalc.hpp"
 #include "value.hpp"
+#include "ccalc.hpp"
 
 using namespace std;
 
@@ -161,19 +159,5 @@ Value Value::operator/(Value obj)
 		else {
 			return Value(this->value.decimal / obj.value.decimal);
 		}
-	}
-};
-
-std::string Value::toString(void)
-{
-	switch (this->type) {
-		case VALUE_TYPE::INTEGER:
-			return std::to_string(this->value.integer);
-
-		case VALUE_TYPE::DECIMAL:
-			return std::to_string(this->value.decimal);
-
-		default:
-			return "";
 	}
 };

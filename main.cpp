@@ -1,4 +1,3 @@
-#include <iomanip>
 #include <iostream>
 #include <string>
 
@@ -12,6 +11,7 @@ static bool hasHighPriorityOperator(string input, int *op_pos);
 static string trim(string input);
 static string unbracket(string input);
 static Value eval(string input);
+static void print(Value value);
 
 static bool hasLowPriorityOperator(string input, int *op_pos)
 {
@@ -175,6 +175,16 @@ static Value eval(string input)
 	}
 };
 
+static void print(Value value)
+{
+	if (value.type == INTEGER) {
+		cout << value.value.integer << endl;
+	}
+	else {
+		cout << value.value.decimal << endl;
+	}
+}
+
 int main(int argc, char *argv[])
 {
 	string input;
@@ -183,7 +193,7 @@ int main(int argc, char *argv[])
 		input = string(argv[1]);
 		try {
 			Value val = eval(input);
-			cout << val.toString() << endl;
+			print(val);
 		} catch (ErrorCode e) {
 			cout << "Err" << endl;
 		}
@@ -200,7 +210,7 @@ int main(int argc, char *argv[])
 			}
 			try {
 				Value val = eval(input);
-				cout << val.toString() << endl;
+				print(val);
 			} catch (ErrorCode e) {
 				cout << "Err" << endl;
 			}
