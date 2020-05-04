@@ -131,6 +131,10 @@ static Value eval(string input)
 	int op_pos;
 	int before, after;
 
+	if (input.empty()) {
+		throw INVALID_INPUT;
+	}
+
 	do {
 		before = (int)input.size();
 		input  = trim(input);
