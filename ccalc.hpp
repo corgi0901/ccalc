@@ -3,7 +3,7 @@
 
 typedef enum {
 	INVALID_INPUT = 100,
-	ZERO_DIVIDE   = 200,
+	ZERO_DIVIDE	  = 200,
 } ErrorCode;
 
 //#define DEBUG

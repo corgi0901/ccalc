@@ -15,9 +15,9 @@ static void print(Value value);
 
 static bool hasLowPriorityOperator(string input, int *op_pos)
 {
-	char prev	 = '\0';
+	char prev	  = '\0';
 	int bkt_depth = 0;
-	bool find	 = false;
+	bool find	  = false;
 
 	for (int i = 0; i < (int)input.size(); i++) {
 		char ch = input[i];
@@ -50,7 +50,7 @@ static bool hasLowPriorityOperator(string input, int *op_pos)
 static bool hasHighPriorityOperator(string input, int *op_pos)
 {
 	int bkt_depth = 0;
-	bool find	 = false;
+	bool find	  = false;
 
 	for (int i = 0; i < (int)input.size(); i++) {
 		char ch = input[i];

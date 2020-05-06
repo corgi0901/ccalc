@@ -1,4 +1,5 @@
 #include "value.hpp"
+
 #include "ccalc.hpp"
 
 using namespace std;
@@ -22,7 +23,7 @@ Value::Value(string value)
 	}
 
 	int sign = 1;
-	int i	= 0;
+	int i	 = 0;
 
 	if (value[i] == '-') {
 		sign = -1;
